@@ -1,10 +1,7 @@
-#  TITLE
-DESCRIPTION ...
+# 🐍 Swift code Quality analiser
+In this repo will create a CLI tool to get metrics from source code writted in swift
 
-## 🧰 Example:
-```swift
-```
-
+<!--
 ## ℹ️  GETTING STARTED
 ### PREREQUISITES 
 - Swift 4+
@@ -22,7 +19,7 @@ git clone https://github.com/PaoloProdossimoLopes/repository-template.git
 So that you can run the project follow this steps:
 1. Choose a simulator 
 2. Then click on the **COMMAND + R** keys or press the ▶︎ (icon at the top of the IDE).
-
+-->
 
 ## 📃 License:
 The MIT license was used in this project.
