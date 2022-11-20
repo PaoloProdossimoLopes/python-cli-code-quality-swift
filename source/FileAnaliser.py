@@ -43,6 +43,21 @@ class FileAnaliser:
         page = self.page
         return page.count(function_identifier)
 
+    def count_number_of_public_methods(self) -> int:
+        function_identifier = 'public func '
+        page = self.page
+        return page.count(function_identifier)
+
+    def count_number_of_private_methods(self) -> int:
+        function_identifier = 'private func '
+        page = self.page
+        return page.count(function_identifier)
+
+    def count_number_of_fileprivate_methdos(self) -> int:
+        function_identifier = 'fileprivate func '
+        page = self.page
+        return page.count(function_identifier)
+
     def count_number_of_forceUnwrap(self) -> int:
         force_unwrap_identifier = '! '
         page = self.page
@@ -90,6 +105,16 @@ class FileAnaliser:
         print_identifier = 'print('
         page = self.page
         return page.count(print_identifier)
+    
+    def count_number_of_structs(self) -> int:
+        struct_identifier = 'struct '
+        page = self.page
+        return page.count(struct_identifier)
+
+    def count_number_of_concrete(self) -> int:
+        n_structs = self.count_number_of_structs()
+        n_classes = self.count_number_of_class_declaration()
+        return n_structs + n_classes
 
     def statistic(self) -> FileStats:
         return FileStats(
@@ -101,6 +126,9 @@ class FileAnaliser:
             number_of_lines = self.count_number_of_lines(),
             number_of_effective_line_of_code = self.count_effective_number_of_code_lines(),
             number_of_methods = self.count_number_of_methods(),
+            number_of_public_methods = self.count_number_of_public_methods(),
+            number_of_private_methods = self.count_number_of_private_methods(),
+            number_of_fileprivate_methods = self.count_number_of_fileprivate_methdos(),
             number_of_force_unwrap = self.count_number_of_forceUnwrap(),
             number_of_comments = self.count_number_of_comments(),
             number_of_todo_commnets = self.count_number_of_todo_comments(),
@@ -108,5 +136,7 @@ class FileAnaliser:
             number_of_unowned = self.count_number_of_unowned_reference(),
             number_of_variable_declaration = self.count_number_of_variable_assinging(),
             number_of_constant_declaration = self.count_number_of_constant_assinging(),
-            number_of_prints = self.count_number_of_prints()
+            number_of_prints = self.count_number_of_prints(),
+            number_of_structs = self.count_number_of_structs(),
+            number_of_concretes = self.count_number_of_concrete()
         )

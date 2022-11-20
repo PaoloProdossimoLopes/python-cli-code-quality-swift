@@ -5,6 +5,9 @@ class DirectoryStats:
     number_of_lines = 0
     number_of_effective_line = 0
     number_of_methods = 0
+    number_of_public_methods = 0
+    number_of_private_methods = 0
+    number_of_fileprivate_methods = 0
     number_of_force_unwrap = 0
     number_of_comments = 0
     number_of_todo_commnets = 0
@@ -27,6 +30,9 @@ class DirectoryStats:
             self.number_of_lines += file_stats.number_of_lines
             self.number_of_effective_line += file_stats.number_of_effective_line_of_code
             self.number_of_methods += file_stats.number_of_methods
+            self.number_of_public_methods += file_stats.number_of_public_methods
+            self.number_of_private_methods += file_stats.number_of_private_methods
+            self.number_of_fileprivate_methods += file_stats.number_of_fileprivate_methods
             self.number_of_force_unwrap += file_stats.number_of_force_unwrap
             self.number_of_comments += file_stats.number_of_comments
             self.number_of_todo_commnets += file_stats.number_of_todo_commnets
@@ -53,6 +59,9 @@ class DirectoryStats:
         - NUMBER OF LINES (LOC): {self.number_of_lines}
         - NUMBER OF EFFECTIVE LINES: {self.number_of_effective_line}
         - NUMBER OF METHODS: {self.number_of_methods}
+        - NUMBER OF PUBLIC METHODS: {self.number_of_public_methods}
+        - NUMBER OF PRIVATE METHODS: {self.number_of_private_methods}
+        - NUMBER OF FILEPRIVATE METHODS: {self.number_of_fileprivate_methods}
         - NUMBER OF FORCE UNWRAP (!): {self.number_of_force_unwrap}
         - NUMBER OF COMMENTS (ALL TIPES): {self.number_of_comments}
         - NUMBER OF TO-DO COMMENTS: {self.number_of_todo_commnets}
