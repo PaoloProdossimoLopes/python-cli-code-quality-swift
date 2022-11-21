@@ -43,6 +43,7 @@ class FileStats:
         - PATH: {self.path}
         - NUMBER OF IMPORTS: {self.number_of_imports}
         - NUMBER OF CLASSES: {self.number_of_class_namespaces}
+        - NUMBER OF STRUCTS: {self.number_of_structs}
         - NUMBER OF EXTENSIONS: {self.number_of_extensions}
         - NUMBER OF LINES (LOC): {self.number_of_lines}
         - NUMBER OF EFFECTIVE LINES: {self.number_of_effective_line_of_code}

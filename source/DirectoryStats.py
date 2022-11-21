@@ -1,6 +1,7 @@
 class DirectoryStats:
     number_of_imports = 0
     number_of_classes = 0
+    number_of_structs = 0
     number_of_extension = 0
     number_of_lines = 0
     number_of_effective_line = 0
@@ -26,6 +27,7 @@ class DirectoryStats:
         for file_stats in self.list_of_file_stats:
             self.number_of_imports += file_stats.number_of_imports
             self.number_of_classes += file_stats.number_of_class_namespaces
+            self.number_of_structs += file_stats.number_of_structs
             self.number_of_extension += file_stats.number_of_extensions
             self.number_of_lines += file_stats.number_of_lines
             self.number_of_effective_line += file_stats.number_of_effective_line_of_code
@@ -55,6 +57,7 @@ class DirectoryStats:
         - PATH: {route}
         - NUMBER OF IMPORTS: {self.number_of_imports}
         - NUMBER OF CLASSES: {self.number_of_classes}
+        - NUMBER OF STRUCTS: {self.number_of_structs}
         - NUMBER OF EXTENSIONS: {self.number_of_extension}
         - NUMBER OF LINES (LOC): {self.number_of_lines}
         - NUMBER OF EFFECTIVE LINES: {self.number_of_effective_line}
